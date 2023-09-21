@@ -1,0 +1,50 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+version: "3.4"
+
+services:
+  bookit.api:
+    image: bookitapi
+    container_name: Bookit.Api
+    build:
+      context: .
+      dockerfile: Bookit.Api/Dockerfile
+    depends_on:
+      - bookit-database
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=a7r@Cupra
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+    ports:
+      - "80"
+      - 5001:443
+    volumes:
+      - ~/.aspnet/usersecrets/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ~/.aspnet/ASP.NET/Https:/root/.aspnet/https:ro
+      - ~/.aspnet/https:/https:ro
+
+  bookit-database:
+    image: postgres
+    container_name: Bookit.Database
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: bookit-database
+    volumes:
+      - ./.containers/database:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  bookit-idp:
+    image: sleighzy/keycloak:latest
+    container_name: Bookit.Identity
+    environment:
+      KEYCLOAK_USER: auth
+      KEYCLOAK_PASSWORD: admin
+      KEYCLOAK_IMPORT: /tmp/bookit-realm-export.json
+    volumes:
+      - ./.containers/identity:/opt/sleighzy/keycloak/standalone/data
+      - ./.files/bookit-realm-export.json:/tmp/bookit-realm-export.json
+    ports:
+      - 18080:8080

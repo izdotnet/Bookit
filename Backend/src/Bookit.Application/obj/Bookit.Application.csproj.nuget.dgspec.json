@@ -1,0 +1,142 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Application/Bookit.Application.csproj": {}
+  },
+  "projects": {
+    "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Application/Bookit.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Application/Bookit.Application.csproj",
+        "projectName": "Bookit.Application",
+        "projectPath": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Application/Bookit.Application.csproj",
+        "packagesPath": "/Users/th3hate/.nuget/packages/",
+        "outputPath": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/th3hate/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Domain/Bookit.Domain.csproj": {
+                "projectPath": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Domain/Bookit.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.143, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.7.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Domain/Bookit.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Domain/Bookit.Domain.csproj",
+        "projectName": "Bookit.Domain",
+        "projectPath": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Domain/Bookit.Domain.csproj",
+        "packagesPath": "/Users/th3hate/.nuget/packages/",
+        "outputPath": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/th3hate/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MediatR.Contracts": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

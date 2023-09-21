@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* START: General styles */
+.max-width {
+  @apply max-w-[1440px] mx-auto;
+}
+
+.padding-x {
+  @apply sm:px-16 px-6;
+}
+
+.padding-y {
+  @apply py-4;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.custom-btn {
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+}
+/* END: General styles */
+
+/* START: Hero styles */
+.hero {
+  @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
+}
+
+.hero__bg {
+  @apply absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96;
+}
+
+.hero__div {
+  @apply mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8;
+}
+.hero__container {
+  @apply mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8;
+}
+
+.hero__title {
+  @apply max-w-2xl text-4xl font-bold tracking-tight text-primary sm:text-6xl lg:col-span-2 xl:col-auto;
+}
+
+.hero__subtitle-container {
+  @apply mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1;
+}
+
+.hero__subtitle {
+  @apply text-lg leading-8 text-gray-600;
+}
+.hero__bold-span {
+  @apply font-bold bg-gradient-to-r from-[#023047] to-[#888] bg-clip-text text-transparent;
+}
+
+.hero__image {
+  @apply mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36;
+}
+
+/* END: Hero styles */
+
+/* START: Home styles */
+.home__text-container {
+  @apply flex flex-col items-start justify-start gap-y-2.5 text-black-100;
+}
+
+.home__filters {
+  @apply mt-12 w-full flex flex-between items-center flex-wrap gap-5;
+}
+
+.home__filter-container {
+  @apply flex justify-start flex-wrap items-center gap-2;
+}
+
+.home__apartments-wrapper {
+  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14;
+}
+
+.home__error-container {
+  @apply mt-16 flex justify-center items-center flex-col gap-2;
+}
+/* END: Home styles */
+
+/* START: Navbar styles */
+
+.navbar__container {
+  @apply bg-gradient-to-r from-base-100 via-base-100 to-indigo-50 shadow border-b border-gray-200;
+}
+
+.navbar__paths {
+  @apply inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium hover:border-gray-300 hover:text-gray-700;
+}
+
+/* END: Navbar styles */
+
+/* START: Footer styles */
+
+.footer__bg {
+  @apply flex flex-col text-black-100 mt-5 border-t border-gray-100 bg-base-100 shadow-sm shadow-inner shadow-indigo-200/10;
+}
+
+.footer__container {
+  @apply flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10;
+}
+
+.footer__link {
+  @apply flex flex-col gap-6 text-sm min-w-[170px];
+}
+
+/* END: Hero styles */
+
+/* START: Apartment Card styles */
+.apartment-card {
+  @apply flex flex-col p-6 m-2 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl;
+}
+
+.apartment-card__content {
+  @apply w-full flex justify-between items-start gap-2;
+}
+
+.apartment-card__content-title {
+  @apply text-[22px] leading-[26px] font-bold capitalize;
+}
+
+.apartment-card__price {
+  @apply flex mt-6 text-[30px] leading-[38px] font-extrabold;
+}
+
+.apartment-card__price-currency {
+  @apply self-start text-[17px] leading-[17px] font-semibold mr-1;
+}
+
+.apartment-card__price-night {
+  @apply self-end text-[14px] leading-[17px] font-medium;
+}
+
+.apartment-card__image {
+  @apply relative w-full h-40 my-3 overflow-y-hidden object-contain;
+}
+
+.apartment-card__icon-container {
+  @apply flex group-hover:invisible w-full m-2 justify-between text-grey;
+}
+
+.apartment-card__icon {
+  @apply flex flex-col justify-center items-center gap-2;
+}
+
+.apartment-card__icon-text {
+  @apply text-[14px] leading-[17px];
+}
+
+.apartment-card__btn-container {
+  @apply hidden group-hover:flex absolute bottom-0 w-full z-10;
+}
+
+.apartment-card__btn {
+  @apply btn btn-primary w-full py-[16px] text-white font-semibold leading-[17px] hover:opacity-60;
+}
+/* END: Apartment Card styles */
+
+/* START: Apartment Details styles */
+.apartment-details__dialog-panel {
+  @apply relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white p-6 text-left shadow-xl transition-all flex flex-col gap-5;
+}
+
+.apartment-details__close-btn {
+  @apply absolute top-2 right-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full;
+}
+
+.apartment-details__main-image {
+  @apply relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg;
+}
+/* END: Apartment Details styles */
+
+/* START: Custom Filter styles */
+.custom-filter__btn {
+  @apply relative w-full min-w-[127px] flex justify-between items-center cursor-default rounded-lg bg-white py-2 px-3 text-left shadow-md sm:text-sm border;
+}
+
+.custom-filter__options {
+  @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm;
+}
+/* END: Custom Filter styles */
+
+/* START: searchbar styles */
+.searchbar {
+  @apply flex items-center justify-start max-sm:flex-col w-full relative max-sm:gap-4 max-w-3xl;
+}
+
+.searchbar__item {
+  @apply flex-1 max-sm:w-full flex justify-start items-center relative;
+}
+
+.searchbar__input {
+  @apply w-full h-[48px] pl-12 p-4 bg-light-white max-sm:rounded-full outline-none cursor-pointer text-sm;
+}
+/* END: searchbar styles */
+
+/* START: search apartment styles */
+.search-apartment {
+  @apply flex-1 max-sm:w-full flex justify-start items-center;
+}
+
+.search-apartment__input {
+  @apply w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full bg-light-white outline-none cursor-pointer text-sm;
+}
+
+.search-apartment__options {
+  @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm;
+}
+
+.search-apartment__option {
+  @apply cursor-default select-none py-2 pl-10 pr-4;
+}
+/* END: search apartment styles */
