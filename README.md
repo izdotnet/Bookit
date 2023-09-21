@@ -37,8 +37,8 @@ KeyCloak credentials:
 * password: admin
 
 Frontend user example:
-*email: izat@test.com
-*password: 12345
+* email: izat@test.com
+* password: 12345
 
 
 
