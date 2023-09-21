@@ -8,6 +8,8 @@ Backend: Asp.Net 7 / Postgresql / Docker
 * Rich Domain Model
 * CQRS - Implement Application use cases and solve cross cutting concerns
 * Authentication - Key Cloak
+* Dapper
+* EntityFramework Core
 * Outbox Pattern
 * Custom Middleware
 * Rich domain model
