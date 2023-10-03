@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Bookit.Application
-build_property.ProjectDir = /Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Application/
+build_property.ProjectDir = /Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Application/

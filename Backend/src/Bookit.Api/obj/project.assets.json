@@ -2443,11 +2443,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Api/Bookit.Api.csproj",
+      "projectUniqueName": "/Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Api/Bookit.Api.csproj",
       "projectName": "Bookit.Api",
-      "projectPath": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Api/Bookit.Api.csproj",
+      "projectPath": "/Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Api/Bookit.Api.csproj",
       "packagesPath": "/Users/th3hate/.nuget/packages/",
-      "outputPath": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Api/obj/",
+      "outputPath": "/Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/th3hate/.nuget/NuGet/NuGet.Config"
@@ -2463,11 +2463,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Application/Bookit.Application.csproj": {
-              "projectPath": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Application/Bookit.Application.csproj"
+            "/Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Application/Bookit.Application.csproj": {
+              "projectPath": "/Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Application/Bookit.Application.csproj"
             },
-            "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Infrastructure/Bookit.Infrastructure.csproj": {
-              "projectPath": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Infrastructure/Bookit.Infrastructure.csproj"
+            "/Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Infrastructure/Bookit.Infrastructure.csproj": {
+              "projectPath": "/Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Infrastructure/Bookit.Infrastructure.csproj"
             }
           }
         }

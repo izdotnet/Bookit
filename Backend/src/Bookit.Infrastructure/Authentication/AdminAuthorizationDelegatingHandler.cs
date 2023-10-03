@@ -58,6 +58,10 @@ public sealed class AdminAuthorizationDelegatingHandler : DelegatingHandler
 
         var authorizationResponse = await base.SendAsync(authorizationRequest, cancellationToken);
 
+        var responseContent = await authorizationResponse.Content.ReadAsStringAsync();
+        Console.WriteLine(responseContent);
+
+
         authorizationResponse.EnsureSuccessStatusCode();
 
         return await authorizationResponse.Content.ReadFromJsonAsync<AuthorizationToken>()

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KgQr2FSKCoXvjRhbbwnWrBBkVJBxqqkF6+i0toR7OwtqbMUCY60Evg0pz+111Yc+D5JwRZhBDTiSMQLBwNL+7A==",
+  "dgSpecHash": "f2dxZQAu47MmHx/w7NsV/XrIsr3IAXgqX0E15Mr86uCb5GLwI7BNyo2huSpkuDlvQoFLKrhgO+m7WmR7nsKISQ==",
   "success": true,
-  "projectFilePath": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Api/Bookit.Api.csproj",
+  "projectFilePath": "/Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Api/Bookit.Api.csproj",
   "expectedPackageFiles": [
     "/Users/th3hate/.nuget/packages/bogus/34.0.2/bogus.34.0.2.nupkg.sha512",
     "/Users/th3hate/.nuget/packages/dapper/2.0.143/dapper.2.0.143.nupkg.sha512",

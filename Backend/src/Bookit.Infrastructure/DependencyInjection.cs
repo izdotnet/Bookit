@@ -43,7 +43,7 @@ public static class DependencyInjection
     private static void AddPersistence(IServiceCollection services, IConfiguration configuration)
     {
         var connectionString =
-            configuration.GetConnectionString("Database")
+            configuration.GetConnectionString("Default")
             ?? throw new ArgumentNullException(nameof(configuration));
 
         services.AddDbContext<ApplicationDbContext>(options =>

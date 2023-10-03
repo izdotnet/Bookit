@@ -1,6 +1,8 @@
-# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
-
 version: "3.4"
+
+networks:
+  dev:
+    driver: bridge
 
 services:
   bookit.api:
@@ -12,39 +14,51 @@ services:
     depends_on:
       - bookit-database
     environment:
+      - ConnectionStrings__Default=Server=bookit-database;Port=5432;Database=bookit-database;Username=postgres;Password=postgres;Integrated Security=true;Pooling=true;
+      - ASPNETCORE_URLS=http://+:80
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_Kestrel__Certificates__Default__Password=a7r@Cupra
-      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
     ports:
-      - "80"
-      - 5001:443
-    volumes:
-      - ~/.aspnet/usersecrets/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ~/.aspnet/ASP.NET/Https:/root/.aspnet/https:ro
-      - ~/.aspnet/https:/https:ro
+      - "8088:80"
+    networks:
+      - dev
 
   bookit-database:
-    image: postgres
+    image: postgres:latest
     container_name: Bookit.Database
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: bookit-database
     volumes:
-      - ./.containers/database:/var/lib/postgresql/data
+      - app_data:/var/lib/postgresql/data
+    networks:
+      - dev
     ports:
       - "5432:5432"
+    restart: always
 
   bookit-idp:
-    image: sleighzy/keycloak:latest
+    image: quay.io/keycloak/keycloak:22.0.3
+    command: start-dev --import-realm --hostname-debug=true
+    restart: always
     container_name: Bookit.Identity
+    depends_on:
+      - bookit-database
     environment:
-      KEYCLOAK_USER: auth
-      KEYCLOAK_PASSWORD: admin
-      KEYCLOAK_IMPORT: /tmp/bookit-realm-export.json
+      DB: bookit-database
+      DB_URL: jdbc:postgresql://bookit-database:5432/bookit-database
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KEYCLOAK_IMPORT: /opt/keycloak/data/import/bookit-realm-export.json
     volumes:
-      - ./.containers/identity:/opt/sleighzy/keycloak/standalone/data
-      - ./.files/bookit-realm-export.json:/tmp/bookit-realm-export.json
+      - app_data:/opt/keycloak/standalone/data
+      - ./.files/bookit-realm-export.json:/opt/keycloak/data/import/bookit-realm-export.json
     ports:
       - 18080:8080
+    networks:
+      - dev
+
+volumes:
+  app_data:

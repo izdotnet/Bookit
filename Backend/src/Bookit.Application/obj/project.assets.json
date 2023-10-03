@@ -327,11 +327,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Application/Bookit.Application.csproj",
+      "projectUniqueName": "/Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Application/Bookit.Application.csproj",
       "projectName": "Bookit.Application",
-      "projectPath": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Application/Bookit.Application.csproj",
+      "projectPath": "/Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Application/Bookit.Application.csproj",
       "packagesPath": "/Users/th3hate/.nuget/packages/",
-      "outputPath": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Application/obj/",
+      "outputPath": "/Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/th3hate/.nuget/NuGet/NuGet.Config"
@@ -346,8 +346,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Domain/Bookit.Domain.csproj": {
-              "projectPath": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Domain/Bookit.Domain.csproj"
+            "/Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Domain/Bookit.Domain.csproj": {
+              "projectPath": "/Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Domain/Bookit.Domain.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nUxhUniq/UFl1fsqJFwuggVlnN7Z1OsOcxz/bRO6BfARyDfsEPxnfP1PWLFwXR9bXX8mbEN6bY55JrnQKBTf/A==",
+  "dgSpecHash": "c43w4LK1sNmk+dNzSXsls4mzNCAh/NcOhtn6T62BcG7w/uhpdDbQte9NOgEIOG8smZQYLzQi2S4L/7w0zxuOPQ==",
   "success": true,
-  "projectFilePath": "/Users/th3hate/Dev/AspNetCore/Bookit/Backend/src/Bookit.Domain/Bookit.Domain.csproj",
+  "projectFilePath": "/Users/th3hate/Development/AspNetCore/Bookit/Backend/src/Bookit.Domain/Bookit.Domain.csproj",
   "expectedPackageFiles": [
     "/Users/th3hate/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512"
   ],

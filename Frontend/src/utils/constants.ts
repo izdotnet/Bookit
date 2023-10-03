@@ -1,4 +1,4 @@
-export const apiUrl = "https://localhost:5001/api";
+export const apiUrl = "http://localhost:8088/api";
 
 export const COOKIE_NAME = "BookitJWT";
 
