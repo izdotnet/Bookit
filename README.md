@@ -26,21 +26,21 @@ Frontend: Next.JS 13.5
 
 # Instructions:
 
+Make sure Docker is installed and running on your system.
+
+Backend: 
+CD to Backend/src/
+RUN command: docker-compose up --build
+
+This will orchestrate 3 docker containers: api / PG database / auth client
+
+Frontend:
+CD to /Frontend
+
 Install Dependencies for frontend project 'npm install' then 'npm run dev'
-Frontend: http://localhost:3000/
+Frontend url: http://localhost:3000/
 
-Host backend on Docker
-* Database: http://localhost:5432/
-* Identity Server: http://localhost:18080/
-* Api server: https://localhost:5001/
-
-KeyCloak credentials:
-* user: auth
-* password: admin
-
-Frontend user example:
-* email: izat@test.com
-* password: 12345
+Test workflow: Create a new user providing an email and password then login to start testing the application
 
 
 
